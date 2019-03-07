@@ -49,7 +49,7 @@ public class Main {
 		
 		customer.setInterestRate(sc.nextDouble());
 		
-		System.out.print("Enter the total number of payments that the loan will be paid back in: ");
+		System.out.print("Enter the number of months the loan will be for: ");
 		
 		customer.setLoanPeriod(sc.nextInt());
 		
@@ -95,7 +95,9 @@ public class Main {
 			System.out.println("Loan Denied\nYour loan request has been denied because you are younger than 18 years of age.");
 			result = false;
 			
-		} else {
+		} 
+		
+		if ((age > 18) && (amount <= 60000.00d) && (amount <= (salary * 3))) {
 			
 			System.out.println("Congratulations, your loan is approved!");
 			result = true;
